@@ -21,6 +21,15 @@
 
 #pragma warning restore IDE0052 // Remove unread private members
 
+        [UIValue("lightsPresetOptions")]
+        private readonly List<object> _lightsPresetOptions = new List<object> {
+            ColorPresetType.RAINBOW,
+            ColorPresetType.USER0,
+            ColorPresetType.USER1,
+            ColorPresetType.USER2,
+            ColorPresetType.USER3
+        };
+
         [UIValue("technicolor")]
         public bool TechnicolorEnabled
         {
@@ -83,6 +92,13 @@
             get => !TechnicolorConfig.Instance.Desync;
             set => TechnicolorConfig.Instance.Desync = !value;
         }
+        
+        [UIValue("lightsPreset")]
+        public ColorPresetType TechnicolourPreset
+        {
+            get => TechnicolorConfig.Instance.TechnicolorPreset;
+            set => TechnicolorConfig.Instance.TechnicolorPreset = value;
+        }
 
 #pragma warning disable IDE0051 // Remove unused private members
         [UIAction("techlightform")]
@@ -129,5 +145,25 @@
         }
 
 #pragma warning restore IDE0051 // Remove unused private members
+
+        [UIAction("lightsPresetForm")]
+        private string lightsPresetFormat(ColorPresetType presetType)
+        {
+            switch (presetType)
+            {
+            case ColorPresetType.RAINBOW:
+                return "Rainbow (default)";
+            case ColorPresetType.USER0:
+                return "User preset 0";
+            case ColorPresetType.USER1:
+                return "User preset 1";
+            case ColorPresetType.USER2:
+                return "User preset 2";
+            case ColorPresetType.USER3:
+                return "User preset 3";
+            default:
+                return "Unsupported preset";
+            }
+        }
     }
 }

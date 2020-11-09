@@ -19,6 +19,17 @@
         GRADIENT,
     }
 
+    // Type of color palette used for WARM/COLD style
+    public enum ColorPresetType
+    {
+        RAINBOW = 0,  // Technicolour default
+        USER0,    // Technicolour cfg presets
+        USER1,
+        USER2,
+        USER3
+        //,LINKED  // current beatsaber player color preset
+    }
+
     public enum TechnicolorTransition
     {
         FLAT,

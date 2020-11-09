@@ -1,5 +1,10 @@
 ﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
-  <modifier-container pref-width='65'>
-    <modifier src='#HueWheel' text='Technicolor' value='technicolor' apply-on-change='true' hover-hint='Enable Technicolor. Same as enabling from Mod Settings'></modifier>
-  </modifier-container>
+  <vertical>
+    <modifier-container pref-width='65'>
+      <modifier src='#HueWheel' text='Technicolor' value='technicolor' apply-on-change='true' hover-hint='Enable Technicolor. Same as enabling from Mod Settings'></modifier>
+    </modifier-container>
+    <settings-container>
+      <dropdown-list-setting text='Presets' value='lightsPreset' options='lightsPresetOptions' formatter='lightsPresetForm' apply-on-change='true' bind-value='true' hover-hint='Warm/Cold color palette preset to use for the lights.'></dropdown-list-setting>
+    </settings-container>
+  </vertical>
 </bg>

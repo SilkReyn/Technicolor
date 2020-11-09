@@ -27,7 +27,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -35,49 +35,80 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Libs\0Harmony.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Libs\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="BeatmapCore">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\BeatmapCore.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Beat Saber_Data\Managed\BeatmapCore.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="BSML">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins\BSML.dll</HintPath>
+      <HintPath>$(TargetPath)\BSML.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Chroma">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins\Chroma.dll</HintPath>
+      <HintPath>$(TargetPath)\Chroma.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Colors">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\Colors.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Beat Saber_Data\Managed\Colors.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="GameplayCore">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\GameplayCore.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Beat Saber_Data\Managed\GameplayCore.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="HMLib">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\HMLib.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Beat Saber_Data\Managed\HMLib.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="HMRendering, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\HMRendering.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Beat Saber_Data\Managed\HMRendering.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="IPA.Loader">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\IPA\Data\Managed\IPA.Loader.dll</HintPath>
+      <HintPath>$(TargetPath)\..\IPA\Data\Managed\IPA.Loader.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Main">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\Main.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Beat Saber_Data\Managed\Main.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Beat Saber_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>$(TargetPath)\..\Beat Saber_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +124,7 @@
     <Compile Include="HarmonyPatches\ScenesTransition\MultiplayerLevelScenesTransitionSetupDataSO.cs" />
     <Compile Include="HarmonyPatches\ScenesTransition\StandardLevelScenesTransitionSetupDataSO.cs" />
     <Compile Include="Plugin.cs" />
+    <Compile Include="Settings\ColorScheme.cs" />
     <Compile Include="Settings\TechnicolorConfig.cs" />
     <Compile Include="Settings\TechnicolorSettingsUI.cs" />
     <Compile Include="TechnicolorController.cs" />
@@ -108,15 +140,12 @@
     <EmbeddedResource Include="Settings\modifiers.bsml" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Settings\settings.bsml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)$(TargetName).dll" "C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins\$(TargetName).dll"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

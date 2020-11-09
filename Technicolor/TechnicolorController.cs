@@ -17,9 +17,9 @@
 
         private static IDictionary<TechniPatchType, Harmony> _techniPatchInstances;
 
-        internal static Color[] TechnicolorWarmPalette { get; } = new Color[4] { new Color(1, 0, 0), new Color(1, 0, 1), new Color(1, 0.6f, 0), new Color(1, 0, 0.4f) };
+        internal static Color[] TechnicolorWarmPalette { get; set; } = Technicolor.Settings.TechnicolorConfig.DEFAULT_WARM_PALETTE;
 
-        internal static Color[] TechnicolorColdPalette { get; } = new Color[4] { new Color(0, 0.501f, 1), new Color(0, 1, 0), new Color(0, 0, 1), new Color(0, 1, 0.8f) };
+        internal static Color[] TechnicolorColdPalette { get; set; } = Technicolor.Settings.TechnicolorConfig.DEFAULT_COLD_PALETTE;
 
         internal static System.Random TechniLightRandom { get; private set; } = new System.Random(400);
 
